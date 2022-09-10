@@ -12,10 +12,10 @@
 <body>
   <main>
     <div  class="images">
-      <div>
+      <div class="logo">
         <img src="images/logo.svg" alt="">
       </div>
-      <div>
+      <div class="other-imgs">
         <img src="images/icon-document.svg" alt="">
         <img src="images/icon-folder.svg" alt="">
         <img src="images/icon-upload.svg" alt="">
@@ -23,9 +23,16 @@
     </div>
 
     <div class="notification">
-      <h1>You’ve used 815 GB of your storage</h1>
-      0 GB
-      1000 GB
+      <h1>You’ve used <span>815 GB</span> of your storage</h1>
+      <div class="bar">
+        <div class="level-bar">
+          <div class="ball"></div>
+        </div>
+      </div>
+      <div class="level-value">
+        <h1>0 GB</h1>
+        <h1>1000 GB</h1>
+      </div>
     </div>
 
     <div class="info">
