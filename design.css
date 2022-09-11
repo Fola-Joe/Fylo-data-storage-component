@@ -55,6 +55,8 @@ body {
     background-image: url(images/bg-mobile.png);
     background-position: center top;
     background-repeat: no-repeat;
+	background-size: cover;
+	background-color: hsl(229, 57%, 11%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -129,8 +131,6 @@ main {
 	background-color: hsl(243, 100%, 93%);
 	border-radius: 50%;
 	margin-left: 92%;
-	/* display: flex;
-	justify-content: right; */
 }
 .level-value {
 	display: flex;
@@ -161,4 +161,23 @@ main {
 	font-weight: 700;
 	font-size: 0.8rem;
 	color: hsl(229, 7%, 55%);
+}
+
+@media screen and (min-width: 480px) {
+	body {
+		background-image: url(images/bg-desktop.png);
+		background-position: bottom;
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+}
+
+@media screen and (min-width: 770px) {
+	main {
+		max-width: 900px;
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+		gap: 2rem;
+		align-items: flex-end;
+	}
 }
