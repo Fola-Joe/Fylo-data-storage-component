@@ -109,28 +109,29 @@ main {
 }
 .bar {
 	width: 100%;
-	height: 1rem;
+	/* height: 1rem; */
 	background-color: hsl(229, 57%, 11%);
 	border-radius: 1rem;
-	padding: 0.12rem 0.15rem;
+	padding: 0.12rem;
 	margin-bottom: 0.5rem;
 }
 .level-bar {
 	width: 75%;
-	height: 1rem;
+	/* height: 1rem; */
 	background-image: linear-gradient(90deg, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
 	border-radius: 1rem;
+	padding: 0.1rem;
 	display: flex;
+	flex-direction: row;
 	align-items: center;
-	justify-content: flex-start;
-	
+	justify-content: flex-end;
 }
 .ball {
 	width: 0.85rem;
 	height: 0.85rem;
 	background-color: hsl(243, 100%, 93%);
 	border-radius: 50%;
-	margin-left: 92%;
+	/* margin-left: 92%; */
 }
 .level-value {
 	display: flex;
@@ -139,7 +140,7 @@ main {
 	font-weight: 700;
 	font-size: 0.9rem;
 }
-.info {
+.info-details {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -172,12 +173,35 @@ main {
 	}
 }
 
-@media screen and (min-width: 770px) {
+@media screen and (min-width: 769px) {
 	main {
-		max-width: 900px;
+		/* max-width: 900px;
 		display: grid;
 		grid-template-columns: 1fr 2fr;
 		gap: 2rem;
+		align-items: flex-end; */
+		display: flex;
+		flex-direction: row;
 		align-items: flex-end;
+		height: fit-content;
+		width: 70%;
+		max-width: 900px;
+		gap: 2rem;
+	} 
+	.images {
+		margin-bottom: 0;
+		width: 30%;
+	}
+	.notification {
+		width: 150%;
+	}
+	.triangle {
+		display: block;
+		height: 0;
+		width: 0;
+		border-right: 10px solid white;
+		border-top: 10px solid white;
+		border-left: 10px solid transparent;
+		border-bottom: 10px solid transparent;
 	}
 }
