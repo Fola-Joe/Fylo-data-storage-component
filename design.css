@@ -197,14 +197,14 @@ main {
 		text-align: left;
 		font-size: 1.1rem;
 	}
-	.info-details:before {
+	.info-details::before {
 		content: "";
 		position: absolute;
-		border-right: 20px solid white;
-		border-top: 20px solid white;
-		border-left: 20px solid transparent;
-		border-bottom: 20px solid transparent;
-		bottom: -15px;
+		border-right: 1.1rem solid white;
+		border-top: 1.1rem solid white;
+		border-left: 1.1rem solid transparent;
+		border-bottom: 1.1rem solid transparent;
+		bottom: -1.1rem;
 		right: 0px;
 	}
 	.info-details {
