@@ -47,7 +47,7 @@ img {
 	display: block;
 }
 
-
+/* My code */
 html {
     box-sizing: border-box;
 }
@@ -107,9 +107,24 @@ main {
 	color: hsl(243, 100%, 93%);
 	font-weight: 700;
 }
+.space-left {position: relative;}
+.info-details {
+	position: absolute;
+	top: 5.5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0.5rem;
+	margin-left: 25%;
+	max-width: 10.5rem;
+    background-color: white;
+	text-align: center;
+	padding: 1.2rem;
+	border-radius: 0.7rem;
+	margin-top: -2rem;
+}
 .bar {
 	width: 100%;
-	/* height: 1rem; */
 	background-color: hsl(229, 57%, 11%);
 	border-radius: 1rem;
 	padding: 0.12rem;
@@ -117,7 +132,6 @@ main {
 }
 .level-bar {
 	width: 75%;
-	/* height: 1rem; */
 	background-image: linear-gradient(90deg, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
 	border-radius: 1rem;
 	padding: 0.1rem;
@@ -131,7 +145,7 @@ main {
 	height: 0.85rem;
 	background-color: hsl(243, 100%, 93%);
 	border-radius: 50%;
-	/* margin-left: 92%; */
+	margin-right: 0.1rem;
 }
 .level-value {
 	display: flex;
@@ -139,19 +153,6 @@ main {
 	color: hsl(243, 100%, 93%);
 	font-weight: 700;
 	font-size: 0.9rem;
-}
-.info-details {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	gap: 0.5rem;
-	margin-left: 25%;
-	max-width: 10.5rem;
-    background-color: white;
-	text-align: center;
-	padding: 1.2rem 0;
-	border-radius: 0.7rem;
-	margin-top: -2rem;
 }
 #space-2 {
 	font-size: 2.1rem;
@@ -164,44 +165,50 @@ main {
 	color: hsl(229, 7%, 55%);
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 1000px) {
 	body {
 		background-image: url(images/bg-desktop.png);
 		background-position: bottom;
 		background-repeat: no-repeat;
 		background-size: contain;
 	}
-}
-
-@media screen and (min-width: 769px) {
 	main {
-		/* max-width: 900px;
-		display: grid;
-		grid-template-columns: 1fr 2fr;
-		gap: 2rem;
-		align-items: flex-end; */
 		display: flex;
 		flex-direction: row;
+		justify-content: center;
 		align-items: flex-end;
 		height: fit-content;
-		width: 70%;
-		max-width: 900px;
+		width: 80%;
+		max-width: 1000px;
 		gap: 2rem;
 	} 
 	.images {
 		margin-bottom: 0;
-		width: 30%;
+		width: 50%;
+		padding-right: 3rem;
+		padding-top: 3rem;
+		padding-bottom: 3rem;
 	}
+	.logo > img {width: 50%;}
 	.notification {
-		width: 150%;
+		width: 100%;
 	}
-	.triangle {
-		display: block;
-		height: 0;
-		width: 0;
-		border-right: 10px solid white;
-		border-top: 10px solid white;
-		border-left: 10px solid transparent;
-		border-bottom: 10px solid transparent;
+	.notification h1 {
+		text-align: left;
+		font-size: 1.1rem;
+	}
+	.info-details:before {
+		content: "";
+		position: absolute;
+		border-right: 20px solid white;
+		border-top: 20px solid white;
+		border-left: 20px solid transparent;
+		border-bottom: 20px solid transparent;
+		bottom: -15px;
+		right: 0px;
+	}
+	.info-details {
+		top: -5rem;
+		right: 0rem;
 	}
 }
